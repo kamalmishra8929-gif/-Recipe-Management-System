@@ -1,0 +1,37 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'recipe.css' %}">
+</head>
+<body>
+    <div class="container mt-5">
+
+<form class="col-6 mx-auto card p-3 shadow-lg" style="width: 50%;" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <h2>UPDATE recipe</h2>
+
+    <div class="mb-3">
+        <label class="form-label">Update Name</label>
+        <input name="recipe_name" value="{{ recipe.recipe_name }}" required type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Update Description</label>
+        <textarea class="form-control" name="description" required>{{ recipe.description }}</textarea>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Update Image</label>
+        <input name="image" type="file" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">UPDATE</button>
+</form>
+    </div>
+</body>
+</html>
