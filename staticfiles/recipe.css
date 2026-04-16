@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #9face6);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+}
+form {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    margin: auto;
+    width: 1000px;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+   
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #1a740a;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background:#ee0505;
+}
+table {
+    width: 200%;
+    border-collapse: collapse;
+    max-width: 900px;
+    }
+  
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+.delete-btn {
+    background: red;
+    color: white ;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: darkred ;
+}
+.btn-container {
+        display: flex;
+        justify-content: flex-end;
+}
+.Delete-all-btn{
+    background-color: antiquewhite;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+.Delete-all-btn:hover{
+    background-color: red;
+}
+.update-btn{
+    background: rgb(51, 51, 213);
+        color: white;
+        padding: 8px 12px;
+        border: none;
+        cursor: pointer;
+}
+.update-btn:hover{
+background-color:aquamarine;
+}
+
+.up-btn{
+    background: rgb(51, 51, 213);
+        color: white;
+        padding: 8px 12px;
+        border: none;
+        cursor: pointer;
+        width: 25%;
+}
+.up-btn:hover{
+    background-color: orange;
+
+}
+.from-label {
+    font-weight: 700;
+}
