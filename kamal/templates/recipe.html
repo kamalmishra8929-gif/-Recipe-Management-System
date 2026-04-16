@@ -68,8 +68,9 @@
       <td>{{items.recipe_name}}</td>
       <td>{{items.description}}</td>
       <td>
+       
     {% if items.image %}
-        <img src="{{ items.image.url }}" width="100" alt="{{ items.recipe_name }}">
+        <img src="{{ items.image.url }}" width="100">
     {% else %}
         No image
     {% endif %}

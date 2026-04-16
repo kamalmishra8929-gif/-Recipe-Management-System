@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-)u@!g9-+lg)-4z_ktx#dh9$q3kou+%wp($pj-^f^)p@il%u(1u'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['recipy-ahu4.onrender.com', '127.0.0.1', 'localhost']
 
@@ -97,7 +97,7 @@ STATICFILES_DIRS = [
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-MEDIA_URL = 'kamal/static/'
-MEDIA_ROOT = BASE_DIR / 'kamal/static'
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR/'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

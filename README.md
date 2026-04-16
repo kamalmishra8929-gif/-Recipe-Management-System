@@ -26,7 +26,7 @@ Users can add new recipes, search for existing ones, update details, and delete 
 ## 🛠️ Tech Stack
 
 * **Backend:** Django (Python)
-* **Frontend:** HTML, CSS
+* **Frontend:** HTML, CSS 
 * **Database:** SQLite
 * **Version Control:** Git & GitHub
 
@@ -80,9 +80,12 @@ http://127.0.0.1:8000/
 ---
 
 ## 📷 Screenshots
-![alt text](image.png)
-![alt text](image-2.png)
-![alt text](image-1.png)
+ Home Page
+![home page](image.png)
+**Recipe List
+![search/Recipe List](image-2.png)
+
+![update](image-1.png)
 
 ---
 
