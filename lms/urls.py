@@ -17,17 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from kamal import views
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns 
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.recipe),
-    path('delete/<int:id>/', views.delete_recipe , name="delete_recipe"),
-    path('delete_all/', views.delete_all ,name= "Delete all"),
-     path('update/<int:id>/', views.update_recipe , name="update_recipe"),
-    
+    path('delete/<int:id>/', views.delete_recipe, name="delete_recipe"),
+    path('delete_all/', views.delete_all, name="delete_all"),
+    path('update/<int:id>/', views.update_recipe, name="update_recipe"),
 ]
 
 if settings.DEBUG:
