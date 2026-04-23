@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'recipe.css' %}">
+</head>
+<body>
+
+<form class="col-6 mx-auto card p-3 shadow-lg" style="width: 50%;justify-content: center; align-items: center; padding: 20px;" method="post" enctype="multipart/form-data">
+
+
+    {% csrf_token %}
+
+
+    <h2>LOGIN</h2>
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">UserName</label>
+    <input name="username" required type="text" class="form-control">
+  </div><br><br>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1"  class="form-label">PASSWORD</label>
+    <input type="PASSWORD" class="form-control"  name="password" required>
+  </div><br><br>
+
+  <button type="submit" class="btn btn-primary">LOGIN</button>
+   <p>Don't Have an account <a href="/register_page/">Register</a></p>
+</form>
+
+</body>
+</html>

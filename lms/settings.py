@@ -1,11 +1,11 @@
 import os
 from pathlib import Path
-
+import cloudinary
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-)u@!g9-+lg)-4z_ktx#dh9$q3kou+%wp($pj-^f^)p@il%u(1u'
 
-DEBUG = False 
+DEBUG = True 
 
 ALLOWED_HOSTS = ['recipy-ahu4.onrender.com', '127.0.0.1', 'localhost']
 
@@ -37,7 +37,7 @@ ROOT_URLCONF = 'lms.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'kamal' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,10 +88,17 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+cloudinary.config(
+    cloud_name="dkqgdtqsh",
+    api_key="738564536945535",
+    api_secret="CHHaXVMUesp1NVPjwoLnwDbyXoM",
+    secure=True,
+)
+
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dkqgdtqsh',
     'API_KEY': '738564536945535',
-    'API_SECRET': 'CHHaXVMUesp1NVPjwoLnwDbyXoM',
+    'API_SECRET':'CHHaXVMUesp1NVPjwoLnwDbyXoM',
 }
 
 STORAGES = {
@@ -104,3 +111,5 @@ STORAGES = {
 }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/recipe/'

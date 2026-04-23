@@ -19,6 +19,7 @@ from django.urls import path
 from kamal import views
 from django.conf import settings
 from django.conf.urls.static import static
+from kamal.views import register_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +27,9 @@ urlpatterns = [
     path('delete/<int:id>/', views.delete_recipe, name="delete_recipe"),
     path('delete_all/', views.delete_all, name="delete_all"),
     path('update/<int:id>/', views.update_recipe, name="update_recipe"),
+    path('login/', views.login_page, name="login" ),
+    path('register_page/', views.register_page, name="register" ),
+    path("logout/", views.logout_page, name="logout")
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

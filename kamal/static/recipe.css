@@ -72,9 +72,10 @@ button:hover {
     background:#ee0505;
 }
 table {
-    width: 200%;
+    width: 100%;
     border-collapse: collapse;
     max-width: 900px;
+    text-align: center;
     }
   
 th,

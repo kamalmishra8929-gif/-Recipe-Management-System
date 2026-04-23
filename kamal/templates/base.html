@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'recipe.css' %}">
+   <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar{
+            width: 100%;
+            background: linear-gradient(to right, #2f77fc, #0e509b);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: right;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .navbar-brand{
+            color: white;
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .navbar-brand:hover{
+            color: #00ffd5;
+        }
+
+        .logout-btn{
+            background-color: #ff4d4d;
+            color: white;
+            23569-07\89+2
+            text-decoration: none;
+            align-items: right;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .logout-btn:hover{
+            background-color: #cc0000;
+            transform: scale(1.05);
+        }
+
+        .content{
+            padding: 20px;
+        }
+    </style>
+
+    
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <div>
+
+{% if request.user.username %}
+<span style="color:yellow; padding:10px 18px; border-radius: 8px; transition: 0.3s ease;">{{request.user.username}}</span>
+{%endif%}
+
+{% if request.user.is_superuser %}
+<span style="color:red;">ADMIN</span>
+{% endif %}
+
+<a href="/logout/"><button class="logout-btn">Logout</button></a>
+
+</div>
+</nav>
+{% block content %}{% endblock  %}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,18 +16,41 @@ Users can add new recipes, search for existing ones, update details, and delete 
 
 * 🔄 Full CRUD functionality (Create, Read, Update, Delete)
 * 🔍 Search recipes by name
+* 🔐 User Authentication (Register / Login / Logout)
+* 👤 User-specific recipe ownership
+* 🛡️ Role-based access control
+* 👑 Superuser/Admin full access
 * 🧠 Backend powered by Django ORM
 * 🖥️ Dynamic rendering using Django Templates
+* 🖼️ Image upload support for recipes
 * 📋 Structured display of recipe data
-* 💡 Simple and user-friendly interface
+* 💡 Clean and user-friendly interface
 
 ---
+## 👥 User Roles & Permissions
 
+### 🔹 Normal Users
+
+* Register and login securely
+* Add new recipes
+* View all recipes
+* Update/Delete only their own recipes
+* Delete all of their own recipes
+
+### 🔹 Admin / Superuser
+
+* Access all recipes
+* Update/Delete any recipe
+* Delete all recipes
+* Manage platform data
+
+---
 ## 🛠️ Tech Stack
 
 * **Backend:** Django (Python)
-* **Frontend:** HTML, CSS 
+* **Frontend:** HTML, CSS
 * **Database:** SQLite
+* **Authentication:** Django Auth System
 * **Version Control:** Git & GitHub
 
 ---
@@ -80,8 +103,10 @@ http://127.0.0.1:8000/
 ---
 
 ## 📷 Screenshots
+ Login Page
+ ![Login page](image-3.png)
  Home Page
-![home page](image.png)
+![home page](image-4.png)
 **Recipe List
 ![search/Recipe List](image-2.png)
 
@@ -91,17 +116,16 @@ http://127.0.0.1:8000/
 
 ## 📁 Project Structure
 
-```id="q9r2kp"
 recipe-management/
 │
-├── app/                # Main Django app
-├── templates/          # HTML templates
-├── static/             # CSS files
-├── screenshots/        # Images for README
-├── manage.py
+├── kamal/              # Main Django App
+├── templates/          # HTML Templates
+├── static/             # CSS / Images
+├── media/              # Uploaded Recipe Images
+├── migrations/         # Database Migrations
 ├── db.sqlite3
+├── manage.py
 ├── requirements.txt
-├── .gitignore
 └── README.md
 ```
 
@@ -110,26 +134,57 @@ recipe-management/
 ## 🚀 Future Enhancements
 
 * 🔐 User Authentication (Login/Signup)
+   1. User Registration
+   2. Secure Password Hashing
+   3. Login using Django Authentication
+   4. Logout Session Handling
+   5. Protected Routes with login_required
 * 🖼️ Image upload for recipes
 * ❤️ Favorite/like recipes feature
 * 🌐 REST API integration
 * 🎨 Enhanced UI/UX design
 
 ---
+🧠 Backend Functionalities
+Django Models & ORM
+Query Filtering
+User Ownership Validation
+Search with icontains
+Form Handling with POST Requests
+File Upload Handling
+Flash Messages Framework
+
+---
+🚀 Future Enhancements
+❤️ Favorite Recipes Feature
+📱 Responsive Mobile UI
+🌐 Django REST API
+📊 Admin Analytics Dashboard
+📧 Email Verification
+🔄 Password Reset
+☁️ Cloud Image Storage
+🔎 Category Filters
+
+---
 
 ## 💡 Learning Outcomes
 
-* Hands-on experience with Django framework
-* Implementation of CRUD operations
-* Working with Django ORM and databases
-* Template rendering and frontend integration
-* Version control using Git and GitHub
+* Hands-on experience with Django Framework
+* Authentication & Authorization
+* CRUD Operations Implementation
+* Role-Based Access Control
+* Working with Django ORM
+* File Upload Handling
+* Template Rendering
+* Secure User Session Management
+* Git & GitHub Workflow
 
 ---
 
 ## 👨‍💻 Author
 
-**Kamal Mishra**
+Kamal Mishra
+Backend Developer | Django Enthusiast | Python Learner
 
 ---
 
